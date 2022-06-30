@@ -25,4 +25,8 @@ export class TemporalStorage implements DataBase {
     public keys(): string[] {
         return Object.keys(this.storage);
     }
+
+    public static toJson(db: TemporalStorage) {
+        return db.storage;
+    }
 }
